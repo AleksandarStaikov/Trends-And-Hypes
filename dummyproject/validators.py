@@ -15,7 +15,7 @@ def validate_amount_of_coolness(value):
         raise serializers.ValidationError('Coolness amount must be between 0 and 100!')
 
 def validate_date_of_coolness(value):
-    if value > datetime.now():
+    if value > datetime.now(value.tzinfo):
         raise serializers.ValidationError('You cant predict is you are gonna become cool in the furue duh!')
 
 def validate_age(value):

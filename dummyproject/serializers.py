@@ -11,7 +11,7 @@ from dummyproject.validators import (
 
 class PersonSerizlizer(serializers.ModelSerializer):
     def validate(self, data):
-        import pdb; pdb.set_trace()
+        
         validate_name(data['name'])
         validate_age(data['age'])
         validate_email(data['email'])
